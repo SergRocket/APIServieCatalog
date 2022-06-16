@@ -1,4 +1,4 @@
-package APIEndpoints;
+package api_endpoints;
 
 public interface EndPointsCatalog {
     String GET_ALL = "all";

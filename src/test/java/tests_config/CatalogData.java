@@ -1,21 +1,21 @@
-package TestsConfig;
+package tests_config;
 
-import APIEndpoints.EndPointsCatalogRegress;
-import APISetup.ImageURL;
-import APISetup.OptionsMap;
-import RestSpecs.RestSpecRegression;
+import api_endpoints.EndPointsCatalogRegress;
+import api_setup.ImageURL;
+import api_setup.pojo_objects.BlueprintOption;
+import io.restassured.RestAssured;
+import rest_spec.RestSpecRegression;
 
-import java.util.HashMap;
 import java.util.List;
 
 import static io.restassured.RestAssured.given;
 
 public class CatalogData extends RestSpecRegression {
 
-    public List<OptionsMap> getOptionsMap(){
-    List<OptionsMap> optionsMapData = given().spec(REQUEST_SPECIFICATION).
+    public BlueprintOption getOptionsMap(){
+        BlueprintOption optionsMapData = RestAssured.given().spec(REQUEST_SPECIFICATION).
     get(EndPointsCatalogRegress.GET_PRODUCT).then().
-    statusCode(200).extract().body().jsonPath().getList("optionResourceMap.optionsMap", OptionsMap.class);
+    statusCode(200).extract().body().as(BlueprintOption.class);
     return optionsMapData;
   }
 

@@ -1,6 +1,6 @@
-package RestSpecs;
+package rest_spec;
 
-import APISetup.BaseSevice;
+import api_setup.BaseSevice;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.specification.RequestSpecification;
 

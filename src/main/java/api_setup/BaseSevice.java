@@ -1,4 +1,4 @@
-package APISetup;
+package api_setup;
 
 public class BaseSevice  {
 

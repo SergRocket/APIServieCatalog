@@ -1,8 +1,9 @@
-package APITests;
+package api_tests;
 
-import APISetup.BaseSevice;
-import TestsConfig.CatalogData;
-import TestsConfig.PricingCatalogData;
+import api_setup.BaseSevice;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import tests_config.CatalogData;
+import tests_config.PricingCatalogData;
 import io.restassured.RestAssured;
 import io.restassured.builder.ResponseSpecBuilder;
 import io.restassured.filter.log.LogDetail;
@@ -25,13 +26,11 @@ public class RegressAPICatalogTests extends BaseSevice {
 
     @Test(description = "Verify the column names of the Cards & Stationery " +
             "products permutations in the Google feed")
-    public void VerifyColNamesCSProductsInGoogleFeed(){
-        catalogData.getOptionsMap();
-        Assert.assertTrue(catalogData.getOptionsMap().stream().allMatch(x->x.getColor().equals("#2C1E16")));
-        Assert.assertTrue(catalogData.getOptionsMap().stream().anyMatch(x->x.getcARD_SIZE_ID().equals("23")));
-        Assert.assertTrue(catalogData.getOptionsMap().stream().anyMatch(x->x.getgREETING().equals("CHRISTMAS")));
-        Assert.assertTrue(catalogData.getOptionsMap().stream().anyMatch(x->x.getpAPER_TYPE().contains("Regular")));
-        Assert.assertTrue(catalogData.getOptionsMap().stream().anyMatch(x->x.gettRIM().equals("Regular")));
+    public void VerifyColNamesCSProductsInGoogleFeed() throws JsonProcessingException {
+        Assert.assertTrue(catalogData.getOptionsMap().getProductCode().equals("1431302"));
+        Assert.assertTrue(catalogData.getOptionsMap().getMetadata().getBrand().equals("SFLY"));
+        Assert.assertTrue(catalogData.getOptionsMap().getMetadata().getTitle().contains("Wreathed in Joy"));
+        Assert.assertTrue(catalogData.getOptionsMap().getMetadata().getCategoryCode().equals("93491"));
     }
 
     @Test(description = "Verify the column name of the Cards & Stationery")

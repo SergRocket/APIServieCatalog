@@ -1,15 +1,16 @@
-package RestSpecs;
+package rest_spec;
 
-import APISetup.BaseSevice;
+import api_setup.BaseSevice;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.specification.RequestSpecification;
 
-public abstract class RestSpecRegressionPricing extends BaseSevice {
+public abstract class RestSpecRegression extends BaseSevice {
+    //protected abstract String getBasePath();
     public RequestSpecification REQUEST_SPECIFICATION;
-    public RestSpecRegressionPricing(){
+    public RestSpecRegression(){
         REQUEST_SPECIFICATION = new RequestSpecBuilder()
-                .setBaseUri(getBaseUrlRegGetPricing("beta"))
-                .setBasePath(getBasePathRegPricing())
+                .setBaseUri(getBaseUrlReg("beta"))
+                .setBasePath(getBasePathReg())
                 .addHeader("Accept", "application/json")
                 .build();
     }

@@ -1,8 +1,8 @@
-package TestsConfig;
+package tests_config;
 
-import APIEndpoints.EndPointsCatalogRegress;
-import APISetup.PricingMap;
-import RestSpecs.RestSpecRegressionPricing;
+import api_endpoints.EndPointsCatalogRegress;
+import api_setup.pojo_objects.PricingMap;
+import rest_spec.RestSpecRegressionPricing;
 import org.testng.Assert;
 
 import java.util.HashMap;

@@ -1,4 +1,4 @@
-package APIEndpoints;
+package api_endpoints;
 
 public interface EndPointsCatalogRegress {
     String GET_PRODUCT = "/product/1431302";
