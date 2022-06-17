@@ -2,6 +2,7 @@ package api_endpoints;
 
 public interface EndPointsCatalogRegress {
     String GET_PRODUCT = "/product/1431302";
+    String GET_PRODUCT_WITH_HASH = "product/1495080";
     String GET_DETTRIBUTE_NAME = "attributealias/forceRefresh";
     String GET_DEBUG_BY_ATTRIBUTE_NAME = "attributealias/forceRefresh";
     String GET_DEBUG_ATTRIBUTE_NAME = "attributealias/forceRefresh";

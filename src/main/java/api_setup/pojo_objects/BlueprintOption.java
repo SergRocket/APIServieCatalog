@@ -2,15 +2,18 @@ package api_setup.pojo_objects;
 
 import api_setup.pojo2.MetaData;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
+import com.fasterxml.jackson.annotation.JsonFormat;
 import java.util.ArrayList;
+import java.util.List;
 
 public class BlueprintOption {
     @JsonIgnoreProperties(ignoreUnknown = true)
         public OptionsMap optionsMap;
         public MetaData metadata;
-        public Object productOptions;
-        public Object blueprintOptions;
+        @JsonFormat(with = JsonFormat.Feature.ACCEPT_SINGLE_VALUE_AS_ARRAY)
+        public ArrayList<ProductOptions> productOptions;
+        @JsonFormat(with = JsonFormat.Feature.ACCEPT_SINGLE_VALUE_AS_ARRAY)
+        public ArrayList<OptionsBlue> blueprintOptions;
         public Object formatOptions;
         public Object quantityOptions;
         public String productCode;
@@ -20,7 +23,8 @@ public class BlueprintOption {
         public String occasionId;
         public Object bundleId;
         public String pricingSku;
-        public Object optionResourceMap;
+        @JsonFormat(with = JsonFormat.Feature.ACCEPT_SINGLE_VALUE_AS_ARRAY)
+        public ArrayList<ResourceMap> optionResourceMap;
         public String premiumSku;
         public String premiumSizeId;
 
@@ -29,7 +33,7 @@ public class BlueprintOption {
             super();
         }
 
-        public BlueprintOption(Object optionResourceMap, Object quantityOptions, Object formatOptions, Object blueprintOptions, Object productOptions,String productCode, String skuCode,
+        public BlueprintOption(OptionsMap optionsMap,ArrayList<ResourceMap> optionResourceMap, Object quantityOptions, Object formatOptions, ArrayList<OptionsBlue> blueprintOptions, ArrayList<ProductOptions> productOptions,String productCode, String skuCode,
                                String sizeId, String styleId,
                                String occasionId, Object bundleId,
                                String pricingSku, String premiumSku,
@@ -51,7 +55,7 @@ public class BlueprintOption {
             this.premiumSizeId = premiumSizeId;
             }
 
-    public Object getOptionResourceMap() {
+    public ArrayList<ResourceMap> getOptionResourceMap() {
         return optionResourceMap;
     }
 
@@ -63,11 +67,11 @@ public class BlueprintOption {
         return formatOptions;
     }
 
-    public Object getBlueprintOptions() {
+    public ArrayList<OptionsBlue> getBlueprintOptions() {
         return blueprintOptions;
     }
 
-    public Object getProductOptions() {
+    public ArrayList<ProductOptions> getProductOptions() {
         return productOptions;
     }
 
