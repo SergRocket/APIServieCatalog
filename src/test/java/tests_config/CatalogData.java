@@ -12,6 +12,7 @@ import io.restassured.specification.RequestSpecification;
 import rest_spec.RestSpecRegression;
 
 import javax.xml.bind.DatatypeConverter;
+import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -26,6 +27,10 @@ import static io.restassured.RestAssured.given;
 import static org.codehaus.groovy.runtime.DefaultGroovyMethods.collect;
 
 public class CatalogData extends RestSpecRegression {
+
+    public CatalogData() throws IOException {
+        super();
+    }
 
     public BlueprintOption getOptionsMap(){
        BlueprintOption optionsMapData = RestAssured.given().spec(REQUEST_SPECIFICATION).
@@ -86,22 +91,5 @@ public class CatalogData extends RestSpecRegression {
        boolean matcher = response.equals("Kenpōzome Black");
        return matcher;
     }
-
-
-    public List<String> getOptionsValue(){
-        List<String> pipOptdataPaperFinish = given().spec(REQUEST_SPECIFICATION).
-        get(EndPointsCatalogRegress.GET_PRODUCT).then().
-        statusCode(200).extract().body().jsonPath().getList("blueprintOptions.options[0].values[0]" +
-        ".childOptions[0].values[0].findAll{it.value == 'Matte'}.value");
-        return pipOptdataPaperFinish;
-    }
-
-    public List<ImageURL> getProductVerifyImageLink() {
-        List<ImageURL> productOptdata = given().spec(REQUEST_SPECIFICATION).
-        get(EndPointsCatalogRegress.GET_PRODUCT).then().
-        statusCode(200).extract().body().jsonPath().getList("optionResourceMap.imageUrls[26]", ImageURL.class);
-        return productOptdata;
-    }
-
 
 }

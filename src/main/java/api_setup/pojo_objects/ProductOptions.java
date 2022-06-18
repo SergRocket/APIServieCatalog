@@ -16,7 +16,8 @@ public class ProductOptions {
     @JsonFormat(with = JsonFormat.Feature.ACCEPT_SINGLE_VALUE_AS_ARRAY)
     public ArrayList<ProductOptionsFinalList> values;
 
-    public ProductOptions(ArrayList<OptionsList> productOptions, String key, String displayName, ArrayList<ProductOptionsFinalList> values) {
+    public ProductOptions(ArrayList<OptionsList> productOptions, String key, String displayName,
+                          ArrayList<ProductOptionsFinalList> values) {
         this.productOptions = productOptions;
         this.key = key;
         this.displayName = displayName;

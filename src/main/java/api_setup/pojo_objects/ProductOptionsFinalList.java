@@ -10,7 +10,8 @@ public class ProductOptionsFinalList {
     public String uniqueKey;
     public String avaliability;
 
-    public ProductOptionsFinalList(String value, Integer displayOrder, String displayName, String uniqueKey, String avaliability) {
+    public ProductOptionsFinalList(String value, Integer displayOrder, String displayName, String uniqueKey,
+                                   String avaliability) {
         this.value = value;
         this.displayOrder = displayOrder;
         this.displayName = displayName;

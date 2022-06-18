@@ -33,7 +33,9 @@ public class BlueprintOption {
             super();
         }
 
-        public BlueprintOption(OptionsMap optionsMap,ArrayList<ResourceMap> optionResourceMap, Object quantityOptions, Object formatOptions, ArrayList<OptionsBlue> blueprintOptions, ArrayList<ProductOptions> productOptions,String productCode, String skuCode,
+        public BlueprintOption(OptionsMap optionsMap,ArrayList<ResourceMap> optionResourceMap, Object quantityOptions,
+                               Object formatOptions, ArrayList<OptionsBlue> blueprintOptions,
+                               ArrayList<ProductOptions> productOptions,String productCode, String skuCode,
                                String sizeId, String styleId,
                                String occasionId, Object bundleId,
                                String pricingSku, String premiumSku,
