@@ -33,7 +33,7 @@ public class RegressAPICatalogTests extends BaseSevice {
     }
 
     @Test(description = "Verify the column values for metadata and productCode")
-    public void VerifyColmetadataAndProductCode() throws Exception {
+    public void VerifyColmetadataAndProductCode() {
         Assert.assertTrue(catalogData.getOptionsMap().getProductCode().equals(PRODUCT_CODE));
         Assert.assertTrue(catalogData.getOptionsMap().getMetadata().getBrand().equals(BRAND));
         Assert.assertTrue(catalogData.getOptionsMap().getMetadata().getTitle().contains(TILTE));
@@ -42,7 +42,7 @@ public class RegressAPICatalogTests extends BaseSevice {
 
 
     @Test(description = "Verify the column values for productOptions")
-    public void VerifyProductOptions() throws Exception {
+    public void VerifyProductOptions() {
         Assert.assertTrue(catalogData.getOptionsMap().getProductOptions().stream().
         anyMatch(x->x.getDisplayName().equals(DYSPLAY_NAME)));
         Assert.assertTrue(catalogData.getOptionsMap().getProductOptions().stream().
