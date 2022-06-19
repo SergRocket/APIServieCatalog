@@ -1,6 +1,6 @@
 package api_setup.pojo_objects;
 
-import api_setup.pojo2.MetaData;
+import api_setup.pojo_objects.MetaData;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import java.util.ArrayList;

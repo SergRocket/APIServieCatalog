@@ -1,17 +1,20 @@
 package api_tests;
 
 import api_setup.BaseSevice;
+import api_setup.ExtentReportManager;
+import com.aventstack.extentreports.ExtentTest;
 import com.fasterxml.jackson.core.JsonProcessingException;
+import org.testng.ITestContext;
+import org.testng.annotations.*;
 import tests_config.CatalogData;
 import io.restassured.RestAssured;
 import io.restassured.builder.ResponseSpecBuilder;
 import io.restassured.filter.log.LogDetail;
 import org.testng.Assert;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
+import java.lang.reflect.Method;
 import java.security.NoSuchAlgorithmException;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -66,8 +69,8 @@ public class RegressAPICatalogTests extends BaseSevice {
     @Test(description = "Verify the column values for hashedMD5 values")
     public void VerifyHashedOptions() throws JsonProcessingException, UnsupportedEncodingException,
         NoSuchAlgorithmException {
-        Assert.assertTrue(catalogData.getHashValues().size() == catalogData.getHashValuesFromOptionsMapStrings().
-                size());
+        Assert.assertTrue(catalogData.getHashValues().size() == catalogData.getHashValuesFromOptionsMapStrings()
+                .size());
         Assert.assertTrue(catalogData.getHashValuesFromOptionsMapStrings().stream().anyMatch(value->catalogData.
                 getHashValues().equals(value)));
 

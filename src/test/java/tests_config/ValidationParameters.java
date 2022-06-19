@@ -12,4 +12,5 @@ public interface ValidationParameters {
     String DEFAULT_VALUE = "Regular";
     String KEY_VALUE = "PAPER_TYPE";
     String CATEGORY_CODE = "93491";
+    String COLOR_HEX_NAME = "Kenpōzome Blac";
 }
