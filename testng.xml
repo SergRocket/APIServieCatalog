@@ -2,12 +2,13 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true" name="C:/Users/38096/IdeaProjects/APIServieCatalog">
-        <classes><class name="APITests.RegressAPICatalogTests">
+        <classes><class name="api_tests.RegressAPICatalogTests">
             <methods>
-                <include name="VerifyColNamesCSProductsInGoogleFeed"/>
-                <include name="VerifyColNamesChildsInGoogleFeed"/>
-                <include name="VerifyImageLink"/>
-                <include name="VerifySalePricingForDiffrntProducts"/>
+                <include name="VerifyColmetadataAndProductCode"/>
+                <include name="VerifyProductOptions"/>
+                <include name="VerifyColBluePrintOptions"/>
+                <include name="VerifyHashedOptions"/>
+                <include name="VerifyHashValues"/>
             </methods>
         </class>
         </classes>

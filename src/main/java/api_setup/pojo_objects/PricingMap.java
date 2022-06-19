@@ -1,4 +1,4 @@
-package APISetup;
+package api_setup.pojo_objects;
 
 public class PricingMap {
     public String sku;
