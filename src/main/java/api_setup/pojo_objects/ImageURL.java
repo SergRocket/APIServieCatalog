@@ -1,4 +1,4 @@
-package api_setup;
+package api_setup.pojo_objects;
 
 public class ImageURL {
     public String label;

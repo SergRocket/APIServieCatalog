@@ -1,7 +1,6 @@
 package tests_config;
 
 import api_endpoints.EndPointsCatalogRegress;
-import api_setup.ImageURL;
 import api_setup.Reporter;
 import api_setup.pojo_objects.*;
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -13,16 +12,13 @@ import io.restassured.specification.RequestSpecification;
 import rest_spec.RestSpecRegression;
 
 import javax.xml.bind.DatatypeConverter;
-import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 import static io.restassured.RestAssured.given;
 import static org.codehaus.groovy.runtime.DefaultGroovyMethods.collect;
