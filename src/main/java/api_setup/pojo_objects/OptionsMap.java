@@ -21,7 +21,7 @@ public class OptionsMap {
         super();
     }
 
-    public OptionsMap(String color, String cARD_SIZE_ID, String gREETING, String pAPER_TYPE, String tRIM, String pAPER_FINISH) {
+    public OptionsMap(String color, String cart_size_Id, String greeting, String paper_type, String trim, String paper_finish) {
         this.color = color;
         this.cart_size_Id = cart_size_Id;
         this.greeting = greeting;
