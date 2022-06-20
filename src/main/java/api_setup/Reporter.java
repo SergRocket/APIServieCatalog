@@ -9,7 +9,6 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.testng.IInvokedMethodListener;
 import org.testng.ITestListener;
-import org.testng.ITestResult;
 
 public class Reporter implements Filter, IInvokedMethodListener, ITestListener {
     private static final Logger LOGGER = LogManager.getLogger(Reporter.class.getName());
