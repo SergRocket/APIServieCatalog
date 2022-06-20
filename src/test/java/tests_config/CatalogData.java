@@ -69,12 +69,14 @@ public class CatalogData extends RestSpecRegression {
         List<String> keyListAfterHasing = new ArrayList<>();
         ObjectMapper objectMapper = new ObjectMapper();
         List<String> keyListForHasing = new ArrayList<>();
-        for(Map<String, String> as : optionsMapData)
-        {keyListForHasing.add(objectMapper.writeValueAsString(as));}
+        for(Map<String, String> as : optionsMapData){
+            keyListForHasing.add(objectMapper.writeValueAsString(as));
+        }
         Reporter.log("Adding to each option value in the map brackets to perform valid hashing");
-        for(String s : keyListForHasing)
-        {keyListAfterHasing.add(DatatypeConverter.printHexBinary(
-        MessageDigest.getInstance("MD5").digest(s.getBytes("UTF-8"))).toLowerCase());}
+        for(String s : keyListForHasing){
+            keyListAfterHasing.add(DatatypeConverter.printHexBinary(
+        MessageDigest.getInstance("MD5").digest(s.getBytes("UTF-8"))).toLowerCase());
+        }
         Reporter.log("Performing hashing in MD5 format for all values from the map");
         return keyListAfterHasing;
     }

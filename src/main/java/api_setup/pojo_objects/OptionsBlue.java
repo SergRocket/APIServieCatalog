@@ -20,7 +20,8 @@ public class OptionsBlue {
     @JsonFormat(with = JsonFormat.Feature.ACCEPT_SINGLE_VALUE_AS_ARRAY)
     public ArrayList<OptionsForBlue> options;
 
-    public OptionsBlue(ArrayList<OptionsMap> optionsMap, String skuCode, String sizeId, String styleId, String occasionId, String bundledId, String pricingSku, String premiumSku, String premiumSizeId, ArrayList<OptionsForBlue> options) {
+    public OptionsBlue(ArrayList<OptionsMap> optionsMap, String skuCode, String sizeId, String styleId, String occasionId,
+                       String bundledId, String pricingSku, String premiumSku, String premiumSizeId, ArrayList<OptionsForBlue> options) {
         this.optionsMap = optionsMap;
         this.skuCode = skuCode;
         this.sizeId = sizeId;

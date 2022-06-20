@@ -6,15 +6,15 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class OptionsMap {
     public String color;
     @JsonProperty("CARD_SIZE_ID")
-    public String cARD_SIZE_ID;
+    public String cart_size_Id;
     @JsonProperty("GREETING")
-    public String gREETING;
+    public String greeting;
     @JsonProperty("PAPER_TYPE")
-    public String pAPER_TYPE;
+    public String paper_type;
     @JsonProperty("TRIM")
-    public String tRIM;
+    public String trim;
     @JsonProperty("PAPER_FINISH")
-    public String pAPER_FINISH;
+    public String paper_finish;
 
     public OptionsMap()
     {
@@ -23,34 +23,34 @@ public class OptionsMap {
 
     public OptionsMap(String color, String cARD_SIZE_ID, String gREETING, String pAPER_TYPE, String tRIM, String pAPER_FINISH) {
         this.color = color;
-        this.cARD_SIZE_ID = cARD_SIZE_ID;
-        this.gREETING = gREETING;
-        this.pAPER_TYPE = pAPER_TYPE;
-        this.tRIM = tRIM;
-        this.pAPER_FINISH = pAPER_FINISH;
+        this.cart_size_Id = cart_size_Id;
+        this.greeting = greeting;
+        this.paper_type = paper_type;
+        this.trim = trim;
+        this.paper_finish = paper_finish;
     }
 
     public String getColor() {
         return color;
     }
 
-    public String getcARD_SIZE_ID() {
-        return cARD_SIZE_ID;
+    public String getCart_size_Id() {
+        return cart_size_Id;
     }
 
-    public String getgREETING() {
-        return gREETING;
+    public String getGreeting() {
+        return greeting;
     }
 
-    public String getpAPER_TYPE() {
-        return pAPER_TYPE;
+    public String getPaper_type() {
+        return paper_type;
     }
 
-    public String gettRIM() {
-        return tRIM;
+    public String getTrim() {
+        return trim;
     }
 
-    public String getpAPER_FINISH() {
-        return pAPER_FINISH;
+    public String getPaper_finish() {
+        return paper_finish;
     }
 }

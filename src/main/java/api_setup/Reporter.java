@@ -26,7 +26,8 @@ public class Reporter implements Filter, IInvokedMethodListener, ITestListener {
     }
 
     @Override
-    public Response filter(FilterableRequestSpecification requestSpec, FilterableResponseSpecification responseSpec, FilterContext ctx) {
+    public Response filter(FilterableRequestSpecification requestSpec, FilterableResponseSpecification responseSpec,
+                           FilterContext ctx) {
         Response response = ctx.next(requestSpec, responseSpec);
         if (response.statusCode() >= 400) {
         logOnFail("Test has failed and status code is 400 or higher");
