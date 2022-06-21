@@ -1,4 +1,4 @@
-package api_setup;
+package api.setup;
 
 import io.restassured.filter.Filter;
 import io.restassured.filter.FilterContext;

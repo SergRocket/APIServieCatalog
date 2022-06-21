@@ -1,4 +1,4 @@
-package api_setup.pojo_objects;
+package api.setup.pojo.objects;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
@@ -6,9 +6,9 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import java.util.List;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class ColorData{
-	private String paletteTitle;
+	private final String paletteTitle;
 	@JsonFormat(with = JsonFormat.Feature.ACCEPT_SINGLE_VALUE_AS_ARRAY)
-	private List<ColorsItem> colors;
+	private final List<ColorsItem> colors;
 
 	public ColorData(String paletteTitle, List<ColorsItem> colors) {
 		this.paletteTitle = paletteTitle;

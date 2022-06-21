@@ -1,11 +1,9 @@
-package api_setup.pojo_objects;
+package api.setup.pojo.objects;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-import javax.swing.text.html.Option;
 import java.util.ArrayList;
-import java.util.List;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class ProductOptions {

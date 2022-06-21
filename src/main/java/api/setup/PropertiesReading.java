@@ -1,4 +1,4 @@
-package api_setup;
+package api.setup;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -11,8 +11,7 @@ public class PropertiesReading {
         Properties properties = new Properties();
         FileInputStream inputStream = new FileInputStream(filePath);
         properties.load(inputStream);
-        String env = properties.getProperty("env", "beta");
-        return env;
+        return properties.getProperty("env", "beta");
     }
 
     public String getValue(String envAndDomain, String value) throws Exception {
@@ -20,8 +19,7 @@ public class PropertiesReading {
         Properties properties = new Properties();
         FileInputStream inputStream = new FileInputStream(filePath);
         properties.load(inputStream);
-        String baseUrl = properties.getProperty(value);
-        return baseUrl;
+        return properties.getProperty(value);
     }
 
 }

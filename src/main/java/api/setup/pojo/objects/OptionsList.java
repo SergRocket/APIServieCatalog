@@ -1,4 +1,4 @@
-package api_setup.pojo_objects;
+package api.setup.pojo.objects;
 
 import java.util.ArrayList;
 

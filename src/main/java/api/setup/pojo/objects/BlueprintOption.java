@@ -1,10 +1,8 @@
-package api_setup.pojo_objects;
+package api.setup.pojo.objects;
 
-import api_setup.pojo_objects.MetaData;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import java.util.ArrayList;
-import java.util.List;
 
 public class BlueprintOption {
     @JsonIgnoreProperties(ignoreUnknown = true)

@@ -1,4 +1,4 @@
-package api_setup;
+package api.setup;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;

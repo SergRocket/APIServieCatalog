@@ -1,6 +1,6 @@
 package api_tests;
 
-import api_setup.BaseSevice;
+import api.setup.BaseSevice;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import org.testng.annotations.*;
 import tests_config.CatalogData;
@@ -27,7 +27,7 @@ public class RegressAPICatalogTests extends BaseSevice {
     }
 
     @Test(description = "Verify the column values for metadata and productCode")
-    public void VerifyColmetadataAndProductCode() {
+    public void verifyColmetadataAndProductCode() {
         Assert.assertTrue(catalogData.getOptionsMap().getProductCode().equals(PRODUCT_CODE));
         Assert.assertTrue(catalogData.getOptionsMap().getMetadata().getBrand().equals(BRAND));
         Assert.assertTrue(catalogData.getOptionsMap().getMetadata().getTitle().contains(TILTE));
@@ -36,7 +36,7 @@ public class RegressAPICatalogTests extends BaseSevice {
 
 
     @Test(description = "Verify the column values for productOptions")
-    public void VerifyProductOptions() {
+    public void verifyProductOptions() {
         Assert.assertTrue(catalogData.getOptionsMap().getProductOptions().stream().
         anyMatch(x->x.getDisplayName().equals(DYSPLAY_NAME)));
         Assert.assertTrue(catalogData.getOptionsMap().getProductOptions().stream().
@@ -46,7 +46,7 @@ public class RegressAPICatalogTests extends BaseSevice {
     }
 
     @Test(description = "Verify the column values for bluePrintOptions")
-    public void VerifyColBluePrintOptions() {
+    public void verifyColBluePrintOptions() {
         Assert.assertTrue(catalogData.getOptionsMap().getBlueprintOptions().stream().
         anyMatch(y-> y.getSkuCode().equals(SKU_CODE)));
         Assert.assertTrue(catalogData.getOptionsMap().getBlueprintOptions().stream().
@@ -58,7 +58,7 @@ public class RegressAPICatalogTests extends BaseSevice {
     }
 
     @Test(description = "Verify the column values for hashedMD5 values")
-    public void VerifyHashedOptions() throws JsonProcessingException, UnsupportedEncodingException,
+    public void verifyHashedOptions() throws JsonProcessingException, UnsupportedEncodingException,
         NoSuchAlgorithmException {
         Assert.assertTrue(catalogData.getHashValues().size() == catalogData.getHashValuesFromOptionsMapStrings()
                 .size());
@@ -68,7 +68,7 @@ public class RegressAPICatalogTests extends BaseSevice {
     }
 
     @Test(description = "Verify the values for color")
-    public void VerifyHashValues() {
+    public void verifyHashValues() {
         Assert.assertTrue(catalogData.checkHexCodeOfColor(catalogData.getColorValue()));
     }
 

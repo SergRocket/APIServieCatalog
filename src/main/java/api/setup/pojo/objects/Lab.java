@@ -1,4 +1,4 @@
-package api_setup.pojo_objects;
+package api.setup.pojo.objects;
 
 public class Lab{
 	private double A;
