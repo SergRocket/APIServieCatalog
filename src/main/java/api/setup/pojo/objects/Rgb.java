@@ -1,19 +1,19 @@
 package api.setup.pojo.objects;
 
 public class Rgb{
-	private int R;
-	private int B;
-	private int G;
+	private int r;
+	private int b;
+	private int g;
 
 	public int getR(){
-		return R;
+		return r;
 	}
 
 	public int getB(){
-		return B;
+		return b;
 	}
 
 	public int getG(){
-		return G;
+		return g;
 	}
 }

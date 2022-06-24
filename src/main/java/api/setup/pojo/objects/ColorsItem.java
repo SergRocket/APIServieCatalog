@@ -1,5 +1,8 @@
 package api.setup.pojo.objects;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class ColorsItem{
 	private Hsl hsl;
 	private double luminance;

@@ -1,19 +1,19 @@
 package api.setup.pojo.objects;
 
 public class Hsl{
-	private double S;
-	private int H;
-	private double L;
+	private double s;
+	private int h;
+	private double l;
 
 	public double getS(){
-		return S;
+		return s;
 	}
 
 	public int getH(){
-		return H;
+		return h;
 	}
 
 	public double getL(){
-		return L;
+		return l;
 	}
 }

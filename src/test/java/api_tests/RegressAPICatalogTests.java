@@ -46,7 +46,7 @@ public class RegressAPICatalogTests extends BaseSevice {
     }
 
     @Test(description = "Verify the column values for bluePrintOptions")
-    public void verifyColBluePrintOptions() {
+    public void verifyColumnBluePrintOptions() {
         Assert.assertTrue(catalogData.getOptionsMap().getBlueprintOptions().stream().
         anyMatch(y-> y.getSkuCode().equals(SKU_CODE)));
         Assert.assertTrue(catalogData.getOptionsMap().getBlueprintOptions().stream().
@@ -58,13 +58,11 @@ public class RegressAPICatalogTests extends BaseSevice {
     }
 
     @Test(description = "Verify the column values for hashedMD5 values")
-    public void verifyHashedOptions() throws JsonProcessingException, UnsupportedEncodingException,
-        NoSuchAlgorithmException {
-        Assert.assertTrue(catalogData.getHashValues().size() == catalogData.getHashValuesFromOptionsMapStrings()
-                .size());
-        Assert.assertTrue(catalogData.getHashValuesFromOptionsMapStrings().stream().anyMatch(value->catalogData.
-                getHashValues().equals(value)));
-
+    public void verifyHashedOptions() throws JsonProcessingException, NoSuchAlgorithmException {
+        Assert.assertEquals(catalogData.getHashValuesFromOptionsMapStrings().
+                size(), catalogData.getHashValues().size());
+        Assert.assertTrue(catalogData.getHashValuesFromOptionsMapStrings().
+                equals(catalogData.getHashValues()));
     }
 
     @Test(description = "Verify the values for color")

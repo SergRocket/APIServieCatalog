@@ -1,19 +1,19 @@
 package api.setup.pojo.objects;
 
 public class Lab{
-	private double A;
-	private double B;
-	private double L;
+	private double a;
+	private double b;
+	private double l;
 
 	public double getA(){
-		return A;
+		return a;
 	}
 
 	public double getB(){
-		return B;
+		return b;
 	}
 
 	public double getL(){
-		return L;
+		return l;
 	}
 }

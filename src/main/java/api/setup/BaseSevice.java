@@ -22,8 +22,8 @@ public class BaseSevice extends PropertiesReading {
     private String suiteName;
     public String testName;
     public String env = getEnv();
-    public String baseUrl = getValue(env + ".shutterfly.com", "baseUrl");
-    public String basePath = getValue(env + ".shutterfly.com", "basePathRegression");
+    public String baseUrl = getBaseUrl(env);
+    public String basePath = getBasePath();
 
     @BeforeClass
     public synchronized void beforeClass(ITestContext testContext) {

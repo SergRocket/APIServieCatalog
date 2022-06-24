@@ -14,12 +14,20 @@ public class PropertiesReading {
         return properties.getProperty("env", "beta");
     }
 
-    public String getValue(String envAndDomain, String value) throws Exception {
+    public String getBaseUrl(String env) throws Exception {
         String filePath = "src/main/resources/config.properties";
         Properties properties = new Properties();
         FileInputStream inputStream = new FileInputStream(filePath);
         properties.load(inputStream);
-        return properties.getProperty(value);
+        return properties.getProperty("baseUrl")+ env + ".shutterfly.com";
+    }
+
+    public String getBasePath() throws Exception {
+        String filePath = "src/main/resources/config.properties";
+        Properties properties = new Properties();
+        FileInputStream inputStream = new FileInputStream(filePath);
+        properties.load(inputStream);
+        return properties.getProperty("basePathRegression");
     }
 
 }

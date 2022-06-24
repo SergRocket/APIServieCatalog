@@ -61,8 +61,7 @@ public class CatalogData extends RestSpecRegression {
         return hashValues;
     }
 
-    public List<String> getHashValuesFromOptionsMapStrings() throws JsonProcessingException, NoSuchAlgorithmException,
-                UnsupportedEncodingException {
+    public List<String> getHashValuesFromOptionsMapStrings() throws JsonProcessingException, NoSuchAlgorithmException {
         ArrayList<Map<String,String>> optionsMapData = RestAssured.given().spec(requestSpecification).
         filter(new Reporter()).get(EndPointsCatalogRegress.GET_PRODUCT_WITH_HASH).then().
         statusCode(200).extract().body().jsonPath().get("optionResourceMap.optionsMap");
