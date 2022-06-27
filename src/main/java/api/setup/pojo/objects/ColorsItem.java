@@ -4,18 +4,18 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class ColorsItem{
-	private Hsl hsl;
+	private HslValues hslValues;
 	private double luminance;
 	private double distance;
 	private String requestedHex;
 	private String name;
 	private String hex;
-	private Rgb rgb;
+	private RgbValues rgb;
 	private Lab lab;
 	private double luminanceWCAG;
 
-	public Hsl getHsl(){
-		return hsl;
+	public HslValues getHslValues(){
+		return hslValues;
 	}
 
 	public double getLuminance(){
@@ -38,8 +38,8 @@ public class ColorsItem{
 		return hex;
 	}
 
-	public Rgb getRgb(){
-		return rgb;
+	public RgbValues getRgbValues(){
+		return getRgbValues();
 	}
 
 	public Lab getLab(){

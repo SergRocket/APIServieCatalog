@@ -1,21 +1,20 @@
-package api_tests;
+package api.tests;
 
 import api.setup.BaseSevice;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import org.testng.annotations.*;
-import tests_config.CatalogData;
+import tests.config.CatalogData;
 import io.restassured.RestAssured;
 import io.restassured.builder.ResponseSpecBuilder;
 import io.restassured.filter.log.LogDetail;
 import org.testng.Assert;
-import java.io.UnsupportedEncodingException;
 import java.security.NoSuchAlgorithmException;
-import static tests_config.ValidationParameters.*;
+import static tests.config.ValidationParameters.*;
 
-public class RegressAPICatalogTests extends BaseSevice {
+public class RegressionApiCatalogTests extends BaseSevice {
     CatalogData catalogData = new CatalogData();
 
-    public RegressAPICatalogTests() throws Exception {
+    public RegressionApiCatalogTests() throws Exception {
         super();
     }
 
@@ -27,7 +26,7 @@ public class RegressAPICatalogTests extends BaseSevice {
     }
 
     @Test(description = "Verify the column values for metadata and productCode")
-    public void verifyColmetadataAndProductCode() {
+    public void verifyColumnMetaDataAndProductCode() {
         Assert.assertTrue(catalogData.getOptionsMap().getProductCode().equals(PRODUCT_CODE));
         Assert.assertTrue(catalogData.getOptionsMap().getMetadata().getBrand().equals(BRAND));
         Assert.assertTrue(catalogData.getOptionsMap().getMetadata().getTitle().contains(TILTE));

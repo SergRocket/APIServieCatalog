@@ -28,7 +28,7 @@ public class BaseSevice extends PropertiesReading {
     @BeforeClass
     public synchronized void beforeClass(ITestContext testContext) {
         suiteName = testContext.getCurrentXmlTest().getSuite().getName();
-        ExtentTest extentTest = ExtentReportManager.getiInstanceOfExtentReports(suiteName)
+        ExtentTest extentTest = ExtentReportManager.getInstanceOfExtentReports(suiteName)
         .createTest(getClass().getName());
         parentTest.set(extentTest);
     }
@@ -53,7 +53,7 @@ public class BaseSevice extends PropertiesReading {
             test.get().skip(result.getThrowable());
         else
             test.get().pass("Test has passed");
-        ExtentReportManager.getiInstanceOfExtentReports(suiteName).flush();
+        ExtentReportManager.getInstanceOfExtentReports(suiteName).flush();
         Reporter.log("Begin stopping tests");
     }
 

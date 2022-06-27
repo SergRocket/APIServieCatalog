@@ -1,4 +1,4 @@
-package tests_config;
+package tests.config;
 
 public interface ValidationParameters {
     String SKU_CODE = "1431305";
@@ -12,5 +12,5 @@ public interface ValidationParameters {
     String DEFAULT_VALUE = "Regular";
     String KEY_VALUE = "PAPER_TYPE";
     String CATEGORY_CODE = "93491";
-    String COLOR_HEX_NAME = "Kenpōzome Black";
+    String COLOR_HEXNAME = "Kenpōzome Black";
 }

@@ -1,6 +1,6 @@
 package api.setup.pojo.objects;
 
-public class Rgb{
+public class RgbValues{
 	private int r;
 	private int b;
 	private int g;

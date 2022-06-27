@@ -1,6 +1,6 @@
 package api.setup.pojo.objects;
 
-public class Hsl{
+public class HslValues {
 	private double s;
 	private int h;
 	private double l;

@@ -1,11 +1,10 @@
-package rest_spec;
+package rest.spec;
 
 import api.setup.BaseSevice;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.specification.RequestSpecification;
 
 public abstract class RestSpecRegression extends BaseSevice {
-    //protected abstract String getBasePath();
     public RequestSpecification requestSpecification;
     public RestSpecRegression() throws Exception {
         super();

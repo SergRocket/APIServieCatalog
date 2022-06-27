@@ -11,13 +11,13 @@ import java.util.Date;
 public class ExtentReportManager {
     private static ExtentReports extentReports;
 
-    public static ExtentReports getiInstanceOfExtentReports(String suitename){
+    public static ExtentReports getInstanceOfExtentReports(String suiteName) {
         if(extentReports==null)
-            createInstanceOfReport(suitename);
+            createInstanceOfReport(suiteName);
         return extentReports;
     }
 
-    public static ExtentReports createInstanceOfReport(String suiteName){
+    public static ExtentReports createInstanceOfReport(String suiteName) {
         Date currentDate = new Date();
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd.MM.yyyy_HHmmss");
         ExtentHtmlReporter htmlReporter = new ExtentHtmlReporter(
